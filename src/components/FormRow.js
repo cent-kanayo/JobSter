@@ -1,6 +1,6 @@
 import React from "react";
 
-const FormRow = ({ name, handleChage, value, labelText, type }) => {
+const FormRow = ({ name, handleChange, value, labelText, type }) => {
   return (
     <div className="form-row">
       <label htmlFor={name} className="form-label">
@@ -11,7 +11,7 @@ const FormRow = ({ name, handleChage, value, labelText, type }) => {
         name={name}
         value={value}
         className="form-input"
-        onChange={handleChage}
+        onChange={handleChange}
       />
     </div>
   );

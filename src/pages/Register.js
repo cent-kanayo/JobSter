@@ -62,7 +62,7 @@ const Register = () => {
             type="text"
             name="name"
             value={values.name}
-            handleChage={handleChange}
+            handleChange={handleChange}
           />
         )}
         <FormRow
@@ -70,14 +70,14 @@ const Register = () => {
           type="email"
           name="email"
           value={values.email}
-          handleChage={handleChange}
+          handleChange={handleChange}
         />
         <FormRow
           labelText="Password"
           type="password"
           name="password"
           value={values.password}
-          handleChage={handleChange}
+          handleChange={handleChange}
         />
         <button className="btn btn-block" type="submit" disabled={isLoading}>
           {values.isMember ? "Login" : "Register"}

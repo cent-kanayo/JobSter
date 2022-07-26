@@ -3,5 +3,5 @@ import FormRow from "./FormRow";
 import Navbar from "./Navbar";
 import SmallSidebar from "./SmallSidebar";
 import BigSidebar from "./BigSidebar";
-
-export { Logo, FormRow, Navbar, SmallSidebar, BigSidebar };
+import FormSelect from "./FormSelect";
+export { Logo, FormRow, Navbar, SmallSidebar, BigSidebar, FormSelect };

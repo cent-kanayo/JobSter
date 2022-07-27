@@ -11,7 +11,7 @@ const initialState = {
   name: "",
   email: "",
   password: "",
-  isMember: false,
+  isMember: true,
 };
 const Register = () => {
   const navigate = useNavigate();
@@ -80,7 +80,19 @@ const Register = () => {
           handleChange={handleChange}
         />
         <button className="btn btn-block" type="submit" disabled={isLoading}>
-          {values.isMember ? "Login" : "Register"}
+          {isLoading ? "loading..." : "submit"}
+        </button>
+        <button
+          className="btn btn-block btn-hipster"
+          type="button"
+          disabled={isLoading}
+          onClick={() =>
+            dispatch(
+              loginUser({ email: "testUser@test.com", password: "secret" })
+            )
+          }
+        >
+          {isLoading ? "loading..." : "Demo"}
         </button>
         <p>
           {values.isMember ? "Not a member yet" : "Already a member?"}

@@ -56,6 +56,15 @@ const allJobsSlice = createSlice({
     closeLoading: (state) => {
       state.isLoading = false;
     },
+    handleSearchForm: (state, { payload: { name, value } }) => {
+      state[name] = value;
+    },
+    clearFilters: (state) => {
+      return { ...state, ...initialState };
+    },
+    setPage: (state, { payload }) => {
+      state.page = payload;
+    },
   },
   extraReducers: {
     [getAllJobs.pending]: (state) => {
@@ -64,6 +73,8 @@ const allJobsSlice = createSlice({
     [getAllJobs.fulfilled]: (state, { payload }) => {
       state.isLoading = false;
       state.jobs = payload.jobs;
+      state.numOfPages = payload.numOfPages;
+      state.totalJobs = payload.totalJobs;
     },
     [getAllJobs.rejected]: (state, { payload }) => {
       state.isLoading = false;
@@ -84,6 +95,12 @@ const allJobsSlice = createSlice({
   },
 });
 
-export const { closeLoading, showLoading } = allJobsSlice.actions;
+export const {
+  closeLoading,
+  showLoading,
+  handleSearchForm,
+  clearFilters,
+  setPage,
+} = allJobsSlice.actions;
 
 export default allJobsSlice.reducer;

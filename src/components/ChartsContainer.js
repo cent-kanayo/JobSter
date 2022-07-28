@@ -7,7 +7,7 @@ import BarChart from "./BarChart";
 const ChartsContainer = () => {
   const [barChart, setBArChart] = useState(true);
   const { monthlyApplications: data } = useSelector((store) => store.allJobs);
-  console.log(data);
+
   return (
     <Wrapper>
       <h4>Monthly Application</h4>

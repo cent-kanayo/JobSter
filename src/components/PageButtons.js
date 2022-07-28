@@ -23,7 +23,7 @@ const PageButtons = () => {
     }
     dispatch(setPage(nextPage));
   };
-  const handleClick = () => {};
+
   return (
     <Wrapper>
       <button className="prev-btn" type="button" onClick={prevPage}>

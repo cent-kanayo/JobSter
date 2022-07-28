@@ -17,12 +17,14 @@ const SearchContainer = () => {
   const handleSearch = (e) => {
     const name = e.target.name;
     const value = e.target.value;
+    if (isLoading) return;
     dispatch(handleSearchForm({ name, value }));
   };
   const handleSubmit = (e) => {
     e.preventDefault();
     dispatch(clearFilters());
   };
+
   return (
     <Wrapper>
       <form className="form">

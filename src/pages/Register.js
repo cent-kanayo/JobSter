@@ -49,6 +49,7 @@ const Register = () => {
         navigate("/");
       }, 3000);
     }
+    // eslint-disable-next-line
   }, [user]);
   return (
     <Wrapper className="full-page">
@@ -80,7 +81,7 @@ const Register = () => {
           handleChange={handleChange}
         />
         <button className="btn btn-block" type="submit" disabled={isLoading}>
-          {isLoading ? "loading..." : "submit"}
+          {values.isMember ? "login" : "submit"}
         </button>
         <button
           className="btn btn-block btn-hipster"

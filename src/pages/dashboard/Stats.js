@@ -13,6 +13,7 @@ const Stats = () => {
 
   useEffect(() => {
     dispatch(getStats());
+    // eslint-disable-next-line
   }, []);
 
   if (isLoading) {

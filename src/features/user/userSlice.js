@@ -22,7 +22,7 @@ const initialState = {
 export const registerUser = createAsyncThunk(
   "user/registerUser",
   async (user, thunkAPI) => {
-    return registerUserThunk("/auth/register");
+    return registerUserThunk("/auth/register", user, thunkAPI);
   }
 );
 export const loginUser = createAsyncThunk(
